@@ -45,7 +45,7 @@ class Sequence:
             if line.startswith("off"):
                 lights = line[3:].strip().split(" ")
                 for light in lights:
-                    commands.append(Off(light))
+                    commands.append(Off(light.replace("$", "")))
                 continue
 
             command_parts = line.split(" | ")
@@ -63,4 +63,5 @@ class Sequence:
                         commands.append(SetColorAndBrightness(light.replace("$", ""), color, brightness))
                     continue
 
+        print(commands)
         self.commands = commands * self.repeat

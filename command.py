@@ -31,7 +31,7 @@ class SetColor(Command):
 
     def exec(self, act: "Act"):
         for light in act.stages[self.name].values():
-            light.color(act.colors[self.color])
+            light.on(color=act.colors[self.color])
 
 class SetColorAndBrightness(Command):
     def __init__(self, name, color, brightness):
@@ -100,7 +100,7 @@ class SetColorAll(Command):
     def exec(self, act: "Act"):
         for stage in act.stages.values():
             for light in stage.values():
-                light.color(color=act.colors[self.color])
+                light.on(color=act.colors[self.color])
 
 
 class Smoo(Command):
