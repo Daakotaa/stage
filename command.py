@@ -33,6 +33,16 @@ class SetColor(Command):
         for light in act.stages[self.name].values():
             light.color(act.colors[self.color])
 
+class SetColorAndBrightness(Command):
+    def __init__(self, name, color, brightness):
+        self.type = "set_color_and_brightness"
+        self.name = name
+        self.color = color
+        self.brightness = brightness
+
+    def exec(self, act: "Act"):
+        for light in act.stages[self.name].values():
+            light.color(act.colors[self.color], bri=int(act.colors[self.brightness]))
 
 class Off(Command):
     def __init__(self, name):

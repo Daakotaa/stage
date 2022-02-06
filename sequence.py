@@ -7,6 +7,7 @@ from command import (
     FinishSecond,
     Off,
     SetColor,
+    SetColorAndBrightness,
     SetColorAll,
     Smoo,
 )
@@ -54,6 +55,12 @@ class Sequence:
                     color, *lights = part[1:].split(" ")
                     for light in lights:
                         commands.append(SetColor(light.replace("$", ""), color))
+                    continue
+                if part.startswith("%"):
+                    color, *lights = part[1:].split(" ")
+                    color, brightness = color[1:].split(",")
+                    for light in lights:
+                        commands.append(SetColorAndBrightness(light.replace("$", ""), color, brightness))
                     continue
 
         self.commands = commands * self.repeat

@@ -1,0 +1,82 @@
+$big "Jacob under desk"
+$1 "Pluto ceiling 1"
+$2 "Pluto ceiling 2"
+$3 "Pluto ceiling 3"
+
+#al #1896C2
+#rd #ff0000
+#fg #FFFAFF
+#cl #000001
+
+SMOO 0 -- the transition timing
+PACE 4 -- the number of beats per second
+SONG https://open.spotify.com/track/141SNZkvr2CYsiedNQmOCL
+
+
+SEQ init
+clear
+END
+
+SEQ sub1second1 1
+%#al,134 $big
+%#al,58 $1
+%#al,32 $2
+%#al,20 $3
+END
+
+SEQ sub2second1 2
+%#al,79 $big
+%#al,16 $1
+%#al,20 $2
+%#al,17 $3
+END
+
+SEQ sub3second1 3
+%#al,222 $big
+%#al,90 $1
+%#al,40 $2
+%#al,8 $3
+END
+
+SEQ sub1second2 21
+%#al,134 $big
+%#al,58 $1
+%#al,32 $2
+%#al,20 $3
+END
+
+SEQ sub2second2 22
+%#al,79 $big
+%#al,16 $1
+%#al,20 $2
+%#al,17 $3
+END
+
+SEQ sub3second2 23
+%#al,222 $big
+%#al,90 $1
+%#al,40 $2
+%#al,8 $3
+END
+
+SEQ sub1second3 31
+%#al,134 $big
+%#al,58 $1
+%#al,32 $2
+%#al,20 $3
+END
+
+SEQ sub2second3 32
+%#al,79 $big
+%#al,16 $1
+%#al,20 $2
+%#al,17 $3
+END
+
+SEQ sub3second3 33
+%#al,222 $big
+%#al,90 $1
+%#al,40 $2
+%#al,8 $3
+
+END
